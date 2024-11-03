@@ -19,24 +19,83 @@
 \begin{abstract}
 Nowadays, recommendation systems (RS) play significant part in our lives, they have many various applications such as healthcare, education, and news, they play a critical role across various digital platforms, from e-commerce to social media. They decide for us what to watch, what to buy, there to go on vacation, that may be interesting for us and more. Having a good system of recommendations is a huge benefit for any store or social media, as it can significantly enhance user engagement, drive sales, and improve customer satisfaction by providing personalized content that matches individual preferences and needs. In this paper we will talk about RS, starting with their beginning and ending up nowadays, we will discuss their impact on user experience, ethical side of RS like unfair recommendations caused by algorithmic bias, manipulation and how recommendations subtly influence our behavior and decision-making, and the transparency of algorithms, which is essential in RS to promote user trust and clarity about origin of their recommendations, also we will discuss growing role of AI and machine learning in RS, highlighting both their potential benefits and risks for society. In the end, we will think about future developments in RS, which may include enhanced fairness algorithms and more user-centric personalization approaches and transparency.
 \end{abstract}
-
+% \clearpage
 % \section{USE LATER}
 % About users who often provide personal data without fully understanding how it is used.
 
 \section{Introduction}
 Recommendation systems (RS) have now become an essential guide for decision-making on a broad spectrum of movie and book choices to restaurants and products in today's technology-merged life. Traditionally, recommendations were a result of personal insight and human interaction: one person would suggest an option to another, allowing for a nuanced exchange shaped by personal knowledge and context. However, with the inclusion of RS using AI, algorithms have been playing the lead role in compiling a personalized set of recommendations for the users.
 
-This article summarizes the evolution of RS, starting from Elaine Rich's pioneer work on the Grundy system in 1979 \cite{RICH1979329} to use stereotypes for suggesting books to users. From that day forward, these systems underwent huge technological development and influenced users with their customized content. The RS become more pervasive, and with the development, critical ethical issues arise on issues such as transparency, bias, and user privacy. Furthermore, machine learning introduces potential benefits and risks, raising an overt need to approach ethical and transparent methods in system design.
+This article summarizes the evolution of RS, starting from Elaine Rich's pioneer work on the Grundy system in 1979 \cite{F_RS} to use stereotypes for suggesting books to users. From that day forward, these systems underwent huge technological development and influenced users with their customized content. The RS become more pervasive, and with the development, critical ethical issues arise on issues such as transparency, bias, and user privacy. Furthermore, machine learning introduces potential benefits and risks, raising an overt need to approach ethical and transparent methods in system design.
 
-In this article, we review the past, present, and future of recommendation systems; we focus on the need for interdisciplinary approaches in order to assess ethical and societal implications of algorithmic recommendations. 
-\section{Evolution and Functionality of Recommendation Systems}
-\section{Impact of Recommendation Systems on User Experience}
+In this article, we review the past, present, and future of recommendation systems; we focus on the need for interdisciplinary approaches in order to assess ethical and societal implications of algorithmic recommendations.
+
+
+\section{Background}
+\subsection{Classification}
+Recommender systems (RS) have transformed the way digital interaction is done by providing personalized content to all. Recommender systems, when they were first evolved, were a means to recommend popular items; however, over time and with the evolution of technology, it turned into a sophisticated system with several methodologies involved in it. Within the domain of RS, there exist three basic kinds of recommendations: 
+\begin{enumerate}
+\item Collaborative Filtering: This recommendation form works by taking user activities  into consideration to provide shared patterns across users similar to each other. \cite{RS}
+\item Content-Based Filtering: It analyzes the characteristics of items and based on that, suggests similar items to those that users already like. \cite{RS_AA_3}
+\item Hybrid Systems: These systems try to combine the logics of both collaborative and content-based methods to achieve more accurate recommendations.\cite{RS}\cite{RS_AA_3}
+\item Others: Beyond the primary types, additional recommendation strategies include:
+    \begin{itemize}
+    \item Knowledge-Based Systems: Recommend based on explicit user requirements and domain expertise.\cite{RS_AA_5}
+    \item Demographic-Based Systems: Tailor suggestions using demographic information, assuming shared preferences.\cite{RS}
+    \item Time-Sensitive Recommender Systems: Adjust recommendations based on temporal factors, such as seasonality or trends. \cite{RS}
+    \item Location-Based Recommender Systems: Provide suggestions influenced by the user's geographical location.\cite{RS}
+    \end{itemize}
+\end{enumerate}
+\clearpage
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{src/RS_classification.png}
+    \caption{Classification of RS \cite{RS_AA_2}}
+    \label{fig:RS-Classification}
+\end{figure}
+% \clearpage
+\subsection{First Recommendation Systems} 
+The concept of recommendation systems originated in the early 1990s. Early implementations of RS were relatively simple, with most recommenders relying on popularity metrics in order to recommend items without personalized insights. For example, an e-commerce platform could show a list of "top-selling" items to every user. One of the earliest methods of personalization was collaborative filtering, which allowed recommendations to users based on commonalities among users.
+
+\subsection{Artificial Intelligence in Recommendation Systems}
+
+AI and machine learning turned recommendation systems from static, rule-based systems to dynamic, data-driven personalization. Techniques such as matrix factorization provide a way to extract hidden patterns in large datasets and allow for much better scalability and recommendation accuracy than ever experienced thus far, which is crucial in platforms having millions of items and users.
+
+The evolution of RS has gone from deep learning to reinforcement learning and neural collaborative filtering, allowing insight into user behavior and contextual features such as location and time of day. Modern AI-powered RS can adapt in real time, updating recommendations based on immediate user feedback, continuously learning from the interactions to improve performance.\cite{AI_in_RS}
+
+\subsection{Current Applications of Recommendation Systems}
+
+RS nowadays is being deployed in a range of industries to foster engagement: from e-commerce, which suggests products based on the history of the users' browsing and purchases, to media and streaming that recommend movies, music, or news articles that best fit the taste of a user. It is also used in social media for curating feeds based on user interests, interactions, and trends.
+Education and Career: Course recommendations, job openings, training by user profiles and career paths.
+
+With AI, RS these days are more aware, responsive, and capable of complex tasks much beyond mere recommendations, which were traditional in nature. That is to say, cross-platform suggestions and real-time feedback shape digital experiences in ways unimaginable before.
 \section{Ethical Challenges}
-\section{Transparency and Explainability in Recommendation Systems}
-\section{AI and Machine Learning in Recommendation Systems: Benefits and Risks}
-\section{Future of Ethical Recommendation Systems ????}
+As RS increasingly affect users' experiences on many platforms, ethical concerns develop. What constitutes acceptable behavior in an ethical context regarding RS is generally subjective and often non-trivial. We can, however, identify elements of RS behavior that are widely recognized as constituting ethical concerns-particularly those harming stakeholders or violating rights. The following section describes some of the main ethical challenges with recommendation systems.\cite{RS_ELI}\cite{IaAEC_in_RS}
+
+\subsection{Privacy}  % TODO: Rewrite
+This is a side effect of how RS works, but it creates some serious issues regarding privacy. Because recommendations are customized based on user preference, data profiles of users can be very complex and the user does not know about it. Most RS uses some forms of collaborative filtering that necessitates mass collection of data from users, including the data gathered about them from third-party sites using tracking cookies. The users often consent to vague "Terms and Conditions" that mask the actual level of data gathering, which makes it difficult for them to understand their consent.\cite{IaAEC_in_RS} Further, there are risks related to exploitation, given that breaches might lead to sensitive information leaking. Moreover, RS may infer information concerning the users from their interactions, and hence privacy concerns become much more difficult, with the user not knowing even the extent of such inferred data.\\\\
+These recommendation systems can be used to promote inappropriate or harmful material. In targeting user preferences, RS may suggest material for a user that is in line with a user's interests but is clearly inappropriate from an ethical standpoint. Examples include propaganda material, racist and hate material, or materials not suitable for underage audiences. Further complications arise because the term "inappropriate content" is subjective, since it is attributed to different cultural norms and personal values...
+\subsection{Personal Identity} % Merge or rewrite with "Fairness" to Filter Bubbles/ Bias
+RS's may affect users' individual autonomy and identity. These systems generate dynamically profiles from users' data and the data of other users. Such a generation may misrepresent people's preferences and interests. This kind of misalignment can bias self-concepts of a user, creating restrictions to reach diverse content. Furthermore, there is also the risk, in the evolution of RS towards engagement-based, of creating feedback loops that reinforce given preferences with the aim of creating digital "addiction" that will exploit rather than enrich the identities of users.\cite{FB}
+\subsection{Transparency}
+
+Many recommendation algorithms are proprietary, and their internal details are kept secret to retain the competitive advantage. This limits the possibility for users to understand how their information was collected, processed, and used to arrive at specific recommendations. Informed consent of users with respect to the operation of RS's is impossible without such knowledge of the processes. Second, fairness assessment and detection of possible biases brought by algorithms are problematic when algorithms are opaque.\cite{IaAEC_in_RS}
+
+% \subsection{Fairness}
+% One of the major ethical issues of recommendation systems could be bias. The RS often unconsciously reinforces social biases residing in their training data. For instance, a rating given by a user can be afflicted with influences from his social circle that might not depict a user's taste genuinely. Feedback loops can eventually enhance the bias where a group of people will receive more exposure than others. If this data signals the already existing social behavior, then the already discriminated minorities and other "weaker" groups are discriminated even more, since all recommendations for various groups of users can be biased in the result.
+
+\subsection{Social Implications}
+
+RS have the tendency to become highly socially impactful by the greater magnitude. In casting users into "filter bubbles," these systems could insulate exposure to diverse points of view, creating echo chambers. This would strangle public debate and understanding, as groups, more than ever, get to solidify their points of view without considering opposing opinions \cite{FB}. Malicious actors can use RS as a means of spreading propaganda, too.
+
+... TODO
+
+\section{AI and Machine Learning in Recommendation Systems (?)}
+TODO OR JOIN WITH "Ethical Challenges" 
+\section{Future of Ethical Recommendation Systems}
+TODO (example: news with bias ratings, useful tips?)
 \section{Conclusion}
-% zdroj1\cite{9904386}\\zdroj2\cite{7956539}
+TODO
 \bibliography{lit}
 \bibliographystyle{IEEEtran}
 \end{document}
